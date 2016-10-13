@@ -36,6 +36,8 @@ public class TestClass {
 		printSalary(employees);
 		sortByAge(employees);
 		printSalary(employees);
+		sortByDateHired(employees);
+		printSalary(employees);
 		
 	}
 	
@@ -96,7 +98,17 @@ public class TestClass {
 		});
 	}
 	
-//	private static void sortByDateHired(Employee[] employees){
-//		
-//	}
+	private static void sortByDateHired(Employee[] employees){
+		Arrays.sort(employees, new Comparator<Employee>() {
+			public int compare(Employee e1, Employee e2){
+				if (e1.getDateHired().getTime() > e2.getDateHired().getTime()) {
+					return 1;
+				}else if (e1.getDateHired().getTime() < e2.getDateHired().getTime()) {
+					return -1;
+				}else {
+					return 0;
+				}
+			}
+		});
+	}
 }
