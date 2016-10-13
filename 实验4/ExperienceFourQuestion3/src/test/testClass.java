@@ -50,7 +50,7 @@ public class testClass {
 		}
 
 		for (Field f : fields) {
-			String field = f.toString().substring(f.toString().lastIndexOf(".") + 1); // 取出属性名称
+			String field = f.toString().substring(f.toString().lastIndexOf(".") + 1); 
 			System.out.println("Property:" + field);
 		}
 		Method[] m = c.getMethods();

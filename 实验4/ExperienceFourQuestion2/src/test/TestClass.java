@@ -35,9 +35,9 @@ public class TestClass {
 		sortBySalary(employees);
 		printSalary(employees);
 		sortByAge(employees);
-		printSalary(employees);
+		printName(employees);
 		sortByDateHired(employees);
-		printSalary(employees);
+		printName(employees);
 		
 	}
 	
