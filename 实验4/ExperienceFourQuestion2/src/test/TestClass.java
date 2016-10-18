@@ -88,8 +88,22 @@ public class TestClass {
 		Arrays.sort(person, new Comparator<Person>() {
 			public int compare(Person p1, Person p2){
 				if (p1.getAge() > p2.getAge()) {
-					return 1;
+					return -1;
 				}else if (p1.getAge() < p2.getAge()) {
+					return 1;
+				}else {
+					return 0;
+				}
+			}
+		});
+	}
+	
+	private static void sortByName(Person[] person) {
+		Arrays.sort(person, new Comparator<Person>() {
+			public int compare(Person p1, Person p2) {
+				if (p1.getName().compareTo(p2.getName()) < 0) {
+					return 1;
+				}else if (p1.getName().compareTo(p2.getName()) < 0){
 					return -1;
 				}else {
 					return 0;
@@ -102,9 +116,9 @@ public class TestClass {
 		Arrays.sort(employees, new Comparator<Employee>() {
 			public int compare(Employee e1, Employee e2){
 				if (e1.getDateHired().getTime() > e2.getDateHired().getTime()) {
-					return 1;
-				}else if (e1.getDateHired().getTime() < e2.getDateHired().getTime()) {
 					return -1;
+				}else if (e1.getDateHired().getTime() < e2.getDateHired().getTime()) {
+					return 1;
 				}else {
 					return 0;
 				}
