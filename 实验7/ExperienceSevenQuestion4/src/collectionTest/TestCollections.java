@@ -6,7 +6,7 @@ public class TestCollections {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Student[] students = new Student[5];
+		Student[] students = new Student[100];
 		List<Student> studentsList = new ArrayList<Student>();
 		for (int i = 0; i < students.length; i++) {
 			students[i] = new Student(Util.getRandomName(4, 4), Util.getRandomNumber(20), Util.getRandomNumber(100));
