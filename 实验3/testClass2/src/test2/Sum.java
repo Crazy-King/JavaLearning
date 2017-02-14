@@ -5,6 +5,10 @@ public class Sum {
 	private int end;
 	private int sum;
 	
+	public Sum(int begin, int end){
+		this.begin = begin;
+		this.end = end;
+	}
 	
 	
 	public int getBegin() {
@@ -19,9 +23,7 @@ public class Sum {
 	public void setEnd(int end) {
 		this.end = end;
 	}
-	public int getSum(int begin, int end) {
-		this.begin = begin;
-		this.end = end;
+	public int getSum() {	
 		int sum = 0;
 		if (begin > end) {
 			System.out.println("Wanning! Wrong begin and end.");
